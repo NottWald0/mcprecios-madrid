@@ -10,8 +10,81 @@ h1 {
     color: #C8102E;
     text-align: center;
     font-size: 2.2em;
-    margin-bottom: 20px;
+    line-height: 1.2;
+    margin: 0 0 8px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.subtitulo {
+    text-align: center;
+    color: #6b5a3e;
+    margin: 0 0 24px;
+}
+
+/* Pantallas de carga y error */
+.estado {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    color: #C8102E;
+    font-size: 1.1em;
+}
+
+.estado-error {
+    color: #a00e24;
+    font-weight: 600;
+}
+
+.estado-modal {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.aviso {
+    background-color: #FFF2CC;
+    border-left: 4px solid #FFC72C;
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 0.9em;
+    margin: 0 0 15px;
+}
+
+.sin-resultados {
+    text-align: center;
+    padding: 30px 10px;
+    color: #6b5a3e;
+}
+
+/* Leyenda de colores */
+.leyenda {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 20px;
+    font-size: 0.85em;
+    color: #6b5a3e;
+    margin-bottom: 15px;
+}
+
+.leyenda > span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.muestra {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    background-color: #FFC72C;
+}
+
+.muestra-barato {
+    background-color: #C8102E;
 }
 
 h2 {
@@ -28,29 +101,27 @@ h2 {
     padding: 20px;
 }
 
-/* Contenedor de la tabla */
+/* Contenedor de la tabla: hace scroll en ambas direcciones para que
+   la cabecera y la columna de producto puedan quedarse fijas */
 .table-container {
-    overflow-x: auto;
+    overflow: auto;
+    max-height: 75vh;
     background-color: #FFFFFF;
     border-radius: 8px;
-    padding: 10px;
     max-width: 100%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 table {
     width: 100%;
-    table-layout: fixed;
     border-collapse: separate;
     border-spacing: 0;
 }
 
 th, td {
-    padding: 12px 15px;
+    padding: 10px 12px;
     text-align: center;
     border-bottom: 1px solid #FEE101;
-    min-width: 120px;
-    overflow: hidden;
-    text-overflow: ellipsis;
     white-space: nowrap;
 }
 
@@ -58,8 +129,31 @@ th {
     background-color: #C8102E;
     color: #FFC72C;
     font-weight: 600;
-    text-transform: uppercase;
-    font-size: 0.9em;
+    font-size: 0.85em;
+    line-height: 1.2;
+    white-space: normal;
+    min-width: 100px;
+}
+
+.tabla-precios thead th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.tabla-precios .col-producto {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    text-align: left;
+    white-space: normal;
+    min-width: 200px;
+    max-width: 260px;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.06);
+}
+
+.tabla-precios thead .col-producto {
+    z-index: 3;
 }
 
 td {
@@ -102,6 +196,17 @@ tr:hover td {
 
 .price-button.precio-mas-bajo:hover {
     background-color: #a00e24;
+}
+
+/* Precio no fiable: tono apagado para que no se confunda con los demás */
+.price-button.no-fiable {
+    background-color: #F1ECE0;
+    color: #6b5a3e;
+    border: 1px dashed #b8a67a;
+}
+
+.price-button.no-fiable:hover {
+    background-color: #E8E0CC;
 }
 
 /* Campo de búsqueda */
@@ -167,7 +272,9 @@ tr:hover td {
 .hist-controls button {
     flex: 1;
     padding: 8px;
-    background: #C8102E;
+    background: #FFFFFF;
+    color: #C8102E;
+    font-weight: 600;
     border: 1px solid #C8102E;
     border-radius: 6px;
     cursor: pointer;
@@ -190,6 +297,11 @@ tr:hover td {
     border-bottom: 1px solid #e0e4e8;
     text-align: left;
     font-size: 0.95em;
+}
+
+.hist-table .fila-actual td {
+    font-weight: 700;
+    background-color: #FFF2CC;
 }
 
 /* Contenedor del gráfico */
@@ -217,8 +329,10 @@ tr:hover td {
 /* Filtros desplegables McDonald's */
 .filters {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    align-items: flex-start;
     margin-bottom: 20px;
 }
 
@@ -276,4 +390,62 @@ tr:hover td {
 
 .filter-group::-webkit-scrollbar-track {
     background-color: #FFE28A;
+}
+
+/* Móvil */
+@media (max-width: 600px) {
+    .App {
+        padding: 16px 12px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .subtitulo {
+        font-size: 0.9em;
+        margin-bottom: 16px;
+    }
+
+    .filters {
+        gap: 10px;
+    }
+
+    .filter-group {
+        width: 100%;
+    }
+
+    .search-container input {
+        width: 100%;
+    }
+
+    th {
+        min-width: 84px;
+        font-size: 0.8em;
+    }
+
+    th, td {
+        padding: 8px 6px;
+    }
+
+    .tabla-precios .col-producto {
+        min-width: 120px;
+        max-width: 140px;
+        font-size: 0.85em;
+    }
+
+    .price-button {
+        padding: 6px 8px;
+        font-size: 0.85em;
+    }
+
+    .modal {
+        width: 95%;
+        padding: 18px 14px;
+        max-height: 90vh;
+    }
+
+    .modal h2 {
+        font-size: 1.1em;
+    }
 }

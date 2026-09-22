@@ -88,6 +88,28 @@ con los datos de tu base de datos ya desplegada (no la de local). El workflow
 se puede lanzar también a mano desde la pestaña **Actions** del repositorio,
 con el botón "Run workflow", para probarlo sin esperar al horario programado.
 
+## API del backend
+
+| Ruta | Descripción |
+|---|---|
+| `GET /api/health` | Comprueba que el servidor y la base de datos responden |
+| `GET /api/productos` | Productos con su precio actual; `precio_fiable` indica si el precio es fiable |
+| `GET /api/historico/:id_producto` | Histórico de precios de un producto (el id debe ser un entero positivo) |
+
+## Limitaciones conocidas
+
+- **CAPTCHA de Uber Eats (desde 2026).** Uber Eats muestra un reCAPTCHA antes de la
+  carta, así que el scraper ya no obtiene productos. En ese caso termina con error
+  (la ejecución de GitHub Actions sale en rojo) y no modifica la base de datos. Los
+  datos disponibles son los recogidos entre mayo y junio de 2025.
+- **Productos con el mismo nombre.** En Uber Eats algunos artículos aparecen varias
+  veces con el mismo nombre y distinto precio (suelto, en oferta…). El scraper solo
+  guardaba el nombre, así que esos precios se mezclaban. El backend los detecta
+  (cambios de precio dentro de una misma pasada del scraper) y la web los marca con ⚠.
+- **Histórico depurado.** Hasta la corrección de `db_loader.py` cada ejecución
+  guardaba una fila de histórico aunque el precio no cambiara. Se eliminaron esas
+  filas repetidas (de 16.876 a 4.188); el histórico solo contiene cambios reales.
+
 ## Variables de entorno
 
 Cada parte del proyecto tiene su propio `.env.example` como plantilla:

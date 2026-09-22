@@ -3,8 +3,9 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options   
 from selenium.webdriver.common.by import By             
 import json                                              
-import os                                                
-import time                                              
+import os
+import sys
+import time                                            
 import threading                                         
 from queue import Queue                                  
 
@@ -84,6 +85,12 @@ def scrape_restaurant(restaurante, resultados, lock):
         print(f"Error procesando productos en {restaurante['nombre']}: {e}")
 
     finally:
+        # Si no he encontrado productos, muestro qué página ha cargado para saber el motivo
+        # (por ejemplo, desde 2026 Uber Eats puede mostrar un CAPTCHA en lugar de la carta)
+        if datos['productos']:
+            print(f"{restaurante['nombre']}: {len(datos['productos'])} productos")
+        else:
+            print(f"AVISO: 0 productos en {restaurante['nombre']}. Página cargada: '{navegador.title}' ({navegador.current_url[:80]})")
         navegador.quit()
 
     # Uso un lock para evitar problemas al modificar la lista compartida entre los hilos
@@ -124,9 +131,16 @@ if __name__ == '__main__':
     for t in threads:
         t.join()
 
+    # Si no he obtenido ningún producto, termino con error: así GitHub Actions marca la
+    # ejecución en rojo, no se lanza db_loader y no sobrescribo el JSON anterior
+    total_productos = sum(len(r['productos']) for r in resultados)
+    if total_productos == 0:
+        print("ERROR: no se ha obtenido ningún producto de ningún restaurante. No se guardan datos.")
+        sys.exit(1)
+
     # Guarda los resultados en un archivo JSON
     datos_final = {"restaurantes": resultados}
     with open('datos_extraidos.json', 'w', encoding='utf-8') as out:
         json.dump(datos_final, out, ensure_ascii=False, indent=4)
 
-    print("Extracción completada. Datos guardados en datos_extraidos.json")
+    print(f"Extracción completada: {total_productos} productos. Datos guardados en datos_extraidos.json")
