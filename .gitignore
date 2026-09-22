@@ -16,6 +16,7 @@ get-pip.py
 
 # Datos generados por el scraper (se regeneran en cada ejecución)
 datos_extraidos.json
+html_debug/
 log.txt
 
 # Configuracion local de Claude Code

@@ -47,14 +47,19 @@ for restaurante in informacion["restaurantes"]:
         # Compruebo si el producto ya está en la base de datos para el restaurante
         cursor.execute("SELECT id_producto FROM productos WHERE nombre = %s AND id_restaurante = %s",
                        (producto["nombre"], id_restaurante))
-        resultado = cursor.fetchone() 
+        resultado = cursor.fetchone()
+
+        # Categoría = sección de la carta de Uber Eats (el scraper antiguo no la guardaba)
+        categoria = producto.get("seccion")
 
         if resultado:
-            id_producto = resultado[0]  
+            id_producto = resultado[0]
+            if categoria:
+                cursor.execute("UPDATE productos SET categoria = %s WHERE id_producto = %s", (categoria, id_producto))
         else:
-            cursor.execute("INSERT INTO productos (nombre, id_restaurante) VALUES (%s, %s)",
-                           (producto["nombre"], id_restaurante))  
-            id_producto = cursor.lastrowid  
+            cursor.execute("INSERT INTO productos (nombre, id_restaurante, categoria) VALUES (%s, %s, %s)",
+                           (producto["nombre"], id_restaurante, categoria))
+            id_producto = cursor.lastrowid
 
         # ----------------A continuacion convierto la fecha del JSON a un formato que MySQL entienda-----------------
         fecha = datetime.strptime(producto["fecha"], "%Y-%m-%d %H:%M:%S")
@@ -73,6 +78,10 @@ for restaurante in informacion["restaurantes"]:
                 # y actualizo el precio actual en la tabla Precio con el nuevo precio y fecha
                 cursor.execute("UPDATE precio SET precio = %s, fecha = %s WHERE id_producto = %s",
                                (producto["precio"], fecha, id_producto))
+            else:
+                # Si el precio no cambia, actualizo solo la fecha: así "fecha" indica la última vez que se vio
+                # el producto en la carta y la web puede distinguir los productos que siguen a la venta
+                cursor.execute("UPDATE precio SET fecha = %s WHERE id_producto = %s", (fecha, id_producto))
         else:
             # Si el producto no tiene precio, inserto un nuevo precio en la tabla Precio
             cursor.execute("INSERT INTO precio (id_producto, precio, fecha) VALUES (%s, %s, %s)",

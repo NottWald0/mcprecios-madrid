@@ -1,52 +1,158 @@
 [
   {
-    "enlace": "https://www.ubereats.com/es/store/mcdonalds-carabanchel/lGfE3RJeSEGrw2Vi2Cxa4Q?ad_id=739716807100&campaign_id=10947348928&chain_slug=mcdonalds&diningMode=DELIVERY&gclid=Cj0KCQjw2N2_BhCAARIsAK4pEkU5TjLktt_XLVSKHvt24kMXhYsHxxRIy71sS-pMSY_-9jMzP7F4SDEaAnEyEALw_wcB&gclsrc=aw.ds&kw=&kwid=dsa-2473956379397&placement=&utm_campaign=CM2052283-search-google-nonbrand_162_-99_ES-National_e_all_acq_cpc_es-ES_DSA_Exact__dsa-2473956379397_739716807100_176004706265__m&utm_source=AdWords_NonBrand",
+    "enlace": "https://www.ubereats.com/es/store/mcdonalds-carabanchel/lGfE3RJeSEGrw2Vi2Cxa4Q",
     "nombre": "McDonald's Carabanchel",
-    "direccion": "Carabanchel, Madrid"
+    "direccion": "Calle de la Oca, 105",
+    "codigo_postal": "28025"
   },
   {
-    "enlace": "https://www.ubereats.com/es/store/mcdonalds-plaza-castilla/9WdL8YvJRo2HHbk-GhxKGA?diningMode=DELIVERY&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMkMlMkYlMjBkZSUyMFZpbGxhdmljaW9zYSUyQyUyMDQxJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyQ2hJSm0tMVNJVy1JUVEwUnFjSkV5Yk9Ib1pBJTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMmdvb2dsZV9wbGFjZXMlMjIlMkMlMjJsYXRpdHVkZSUyMiUzQTQwLjM5NjM2MTklMkMlMjJsb25naXR1ZGUlMjIlM0EtMy43NzE3NTkyJTdE",
+    "enlace": "https://www.ubereats.com/es/store/mcdonalds-plaza-castilla/9WdL8YvJRo2HHbk-GhxKGA",
     "nombre": "McDonald's Plaza Castilla",
-    "direccion": "Plaza Castilla, Madrid"
+    "direccion": "Calle de S. Aquilino, 4",
+    "codigo_postal": "28029"
   },
   {
-    "enlace": "https://www.ubereats.com/es-en/store/mcdonalds-gran-via/sSnQZHiSQHKtKDW4tznf5Q?diningMode=DELIVERY&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMkMlMkYlMjBkZSUyMFZpbGxhdmljaW9zYSUyQyUyMDQxJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyQ2hJSm0tMVNJVy1JUVEwUnFjSkV5Yk9Ib1pBJTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMmdvb2dsZV9wbGFjZXMlMjIlMkMlMjJsYXRpdHVkZSUyMiUzQTQwLjM5NjM2MTklMkMlMjJsb25naXR1ZGUlMjIlM0EtMy43NzE3NTkyJTdE&ps=1",
+    "enlace": "https://www.ubereats.com/es/store/mcdonalds-gran-via/sSnQZHiSQHKtKDW4tznf5Q",
     "nombre": "McDonald's Gran Vía",
-    "direccion": "Gran Vía, Madrid"
+    "direccion": "Calle Gran Vía, 55",
+    "codigo_postal": "28013"
   },
   {
-    "enlace": "https://www.ubereats.com/es-en/store/mcdonalds-la-paz/I2RHAAdRQgKubk50I5xZ5w?diningMode=DELIVERY&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMkMlMkYlMjBkZSUyMFZpbGxhdmljaW9zYSUyQyUyMDQxJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyQ2hJSm0tMVNJVy1JUVEwUnFjSkV5Yk9Ib1pBJTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMmdvb2dsZV9wbGFjZXMlMjIlMkMlMjJsYXRpdHVkZSUyMiUzQTQwLjM5NjM2MTklMkMlMjJsb25naXR1ZGUlMjIlM0EtMy43NzE3NTkyJTdE",
+    "enlace": "https://www.ubereats.com/es/store/mcdonalds-la-paz/I2RHAAdRQgKubk50I5xZ5w",
     "nombre": "McDonald's La Paz",
-    "direccion": "La Paz, Madrid"
+    "direccion": "Paseo de la Castellana, 261",
+    "codigo_postal": "28029"
   },
   {
-    "enlace": "https://www.ubereats.com/es-en/store/mcdonalds-ventisquero-de-la-condesa/kM3l1cnyRw6WIENL270teQ?diningMode=DELIVERY&mod=merchantUnavailable&modctx=%257B%2522storeUuid%2522%253A%252290cde5d5-c9f2-470e-9620-434bdbbd2d79%2522%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMkMlMkYlMjBkZSUyMFZpbGxhdmljaW9zYSUyQyUyMDQxJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyQ2hJSm0tMVNJVy1JUVEwUnFjSkV5Yk9Ib1pBJTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMgdvdb2dsZV9wbGFjZXMlMjIlMkMlMjJsYXRpdHVkZSUyMiUzQTQwLjM5NjM2MTklMkMlMjJsb25naXR1ZGUlMjIlM0EtMy43NzE3NTkyJTdE&ps=1",
+    "enlace": "https://www.ubereats.com/es/store/mcdonalds-ventisquero-de-la-condesa/kM3l1cnyRw6WIENL270teQ",
     "nombre": "McDonald's Ventisquero de la Condesa",
-    "direccion": "Ventisquero de la Condesa, Madrid"
+    "direccion": "Av. del Ventisquero de la Condesa, 50",
+    "codigo_postal": "28035"
   },
   {
-    "enlace": "https://www.ubereats.com/es-en/store/mcdonalds-montera/Wj22ufhhSHOzvFpLVsb_HA?diningMode=DELIVERY&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMkMlMkYlMjBkZSUyMFZpbGxhdmljaW9zYSUyQyUyMDQxJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyQ2hJSm0tMVNJVy1JUVEwUnFjSkV5Yk9Ib1pBJTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMgdvdb2dsZV9wbGFjZXMlMjIlMkMlMjJsYXRpdHVkZSUyMiUzQTQwLjM5NjM2MTklMkMlMjJsb25naXR1ZGUlMjIlM0EtMy43NzE3NTkyJTdE&ps=1",
+    "enlace": "https://www.ubereats.com/es/store/mcdonalds-montera/Wj22ufhhSHOzvFpLVsb_HA",
     "nombre": "McDonald's Montera",
-    "direccion": "Montera, Madrid"
+    "direccion": "Calle de la Montera, 47",
+    "codigo_postal": "28004"
   },
   {
-    "enlace": "https://www.ubereats.com/es-en/store/mcdonalds-goya/MEDEMv39QYmvpCCUgYjpBg?diningMode=DELIVERY&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMkMlMkYlMjBkZSUyMFZpbGxhdmljaW9zYSUyQyUyMDQxJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyQ2hJSm0tMVNJVy1JUVEwUnFjSkV5Yk9Ib1pBJTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMgdvdb2dsZV9wbGFjZXMlMjIlMkMlMjJsYXRpdHVkZSUyMiUzQTQwLjM5NjM2MTklMkMlMjJsb25naXR1ZGUlMjIlM0EtMy43NzE3NTkyJTdE",
+    "enlace": "https://www.ubereats.com/es/store/mcdonalds-goya/MEDEMv39QYmvpCCUgYjpBg",
     "nombre": "McDonald's Goya",
-    "direccion": "Goya, Madrid"
+    "direccion": "Calle de Goya, 70",
+    "codigo_postal": "28001"
   },
   {
-    "enlace": "https://www.ubereats.com/es-en/store/mcdonalds-la-gavia/tdEv_CyUQweP8Sx6hRbThA?diningMode=DELIVERY&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMkMlMkYlMjBkZSUyMFZpbGxhdmljaW9zYSUyQyUyMDQxJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyQ2hJSm0tMVNJVy1JUVEwUnFjSkV5Yk9Ib1pBJTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMgdvdb2dsZV9wbGFjZXMlMjIlMkMlMjJsYXRpdHVkZSUyMiUzQTQwLjM5NjM2MTklMkMlMjJsb25naXR1ZGUlMjIlM0EtMy43NzE3NTkyJTdE&ps=1",
+    "enlace": "https://www.ubereats.com/es/store/mcdonalds-la-gavia/tdEv_CyUQweP8Sx6hRbThA",
     "nombre": "McDonald's La Gavia",
-    "direccion": "La Gavia, Madrid"
+    "direccion": "Calle Alto del Retiro, 33",
+    "codigo_postal": "28031"
   },
   {
-    "enlace": "https://www.ubereats.com/es/store/mcdonalds-atocha/JTpFmDbKSti7q8iD6AlqbQ?diningMode=DELIVERY&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMkMlMkYlMjBkZSUyMFZpbGxhdmljaW9zYSUyQyUyMDQxJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyQ2hJSm0tMVNJVy1JUVEwUnFjSkV5Yk9Ib1pBJTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMgdvdb2dsZV9wbGFjZXMlMjIlMkMlMjJsYXRpdHVkZSUyMiUzQTQwLjM5NjM2MTklMkMlMjJsb25naXR1ZGUlMjIlM0EtMy43NzE3NTkyJTdE&ps=1",
+    "enlace": "https://www.ubereats.com/es/store/mcdonalds-atocha/JTpFmDbKSti7q8iD6AlqbQ",
     "nombre": "McDonald's Atocha",
-    "direccion": "Atocha, Madrid"
+    "direccion": "Calle de Atocha, 127",
+    "codigo_postal": "28014"
   },
   {
-    "enlace": "https://www.ubereats.com/es/store/mcdonalds-vallecas-villa/GFoBbofnSSmXHizBQ0QIpA?diningMode=DELIVERY&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMkMlMkYlMjBkZSUyMFZpbGxhdmljaW9zYSUyQyUyMDQxJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyQ2hJSm0tMVNJVy1JUVEwUnFjSkV5Yk9Ib1pBJTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMgdvdb2dsZV9wbGFjZXMlMjIlMkMlMjJsYXRpdHVkZSUyMiUzQTQwLjM5NjM2MTklMkMlMjJsb25naXR1ZGUlMjIlM0EtMy43NzE3NTkyJTdE",
+    "enlace": "https://www.ubereats.com/es/store/mcdonalds-vallecas-villa/GFoBbofnSSmXHizBQ0QIpA",
     "nombre": "McDonald's Vallecas Villa",
-    "direccion": "Vallecas Villa, Madrid"
+    "direccion": "Av. de la Albufera",
+    "codigo_postal": "28031"
+  },
+  {
+    "enlace": "https://www.ubereats.com/es/store/mcdonald-s-colombia/OHVNKcuJU5Sg0J_ve-9QZg",
+    "nombre": "McDonald's Colombia",
+    "direccion": "C/ Príncipe de Vergara 264",
+    "codigo_postal": "28016"
+  },
+  {
+    "enlace": "https://www.ubereats.com/es/store/mcdonalds-villaverde/F0tuozQGTWS-fSkM52MV6A",
+    "nombre": "McDonald's Villaverde",
+    "direccion": "Calle de Eduardo Barreiros 120",
+    "codigo_postal": "28041"
+  },
+  {
+    "enlace": "https://www.ubereats.com/es/store/mcdonalds-manoteras/5GsjooJ3VHyuaRYcB1BtMA",
+    "nombre": "McDonald's Manoteras",
+    "direccion": "C Dulce Chacón, N15",
+    "codigo_postal": "28050"
+  },
+  {
+    "enlace": "https://www.ubereats.com/es/store/mcdonalds-vaguada/h_dDt4MFSY2qjNPQVg5DYg",
+    "nombre": "McDonald's Vaguada",
+    "direccion": "Av. de Monforte de Lemos",
+    "codigo_postal": "28029"
+  },
+  {
+    "enlace": "https://www.ubereats.com/es/store/mcdonalds-jumbo/DDVncUsUR7qZO7m7T_RiKg",
+    "nombre": "McDonald's Jumbo",
+    "direccion": "Avenida de Pío XII 2",
+    "codigo_postal": "28016"
+  },
+  {
+    "enlace": "https://www.ubereats.com/es/store/mcdonalds-principe-pio/CajWDs2oR0iZ3pfaa49hyg",
+    "nombre": "McDonald's Príncipe Pío",
+    "direccion": "Paseo de la Florida, 2",
+    "codigo_postal": "28008"
+  },
+  {
+    "enlace": "https://www.ubereats.com/es/store/mcdonalds-tablas-shell/oll9Q_AyT2iiejB6rnnogg",
+    "nombre": "McDonald's Tablas Shell",
+    "direccion": "Av. de Santo Domingo de la Calzada, 10",
+    "codigo_postal": "28050"
+  },
+  {
+    "enlace": "https://www.ubereats.com/es/store/mcdonalds-las-tablas-repsol/FF6O8SGCQZC4t6fWt5wtkQ",
+    "nombre": "McDonald's Las Tablas Repsol",
+    "direccion": "Calle del Abetal, 8",
+    "codigo_postal": "28050"
+  },
+  {
+    "enlace": "https://www.ubereats.com/es/store/mcdonalds-beata/NNoj9HU9WYG0WRXEHy0Pog",
+    "nombre": "McDonald's Beata",
+    "direccion": "Plaza de la Beata María Ana de Jesús 14",
+    "codigo_postal": "28045"
+  },
+  {
+    "enlace": "https://www.ubereats.com/es/store/mcdonalds-metropolitano-estadio/mtNRGrK9Xk2gtGwfTz2QFA",
+    "nombre": "McDonald's Metropolitano Estadio",
+    "direccion": "Avenida de Luis Aragonés, n 4",
+    "codigo_postal": "28022"
+  },
+  {
+    "enlace": "https://www.ubereats.com/es/store/mcdonalds-fuencarral/XqsjqQY4TOazCpeVNRU6Ew",
+    "nombre": "McDonald's Fuencarral",
+    "direccion": "Calle de Fuencarral, 103",
+    "codigo_postal": "28004"
+  },
+  {
+    "enlace": "https://www.ubereats.com/es/store/mcdonalds-hortaleza/o_x_tYiaRCOlSm3BWwVfWw",
+    "nombre": "McDonald's Hortaleza",
+    "direccion": "Av. de los Andes, 46",
+    "codigo_postal": "28042"
+  },
+  {
+    "enlace": "https://www.ubereats.com/es/store/mcdonalds-vicalvaro/xMo369KIXT2M7Q05mRQs4Q",
+    "nombre": "McDonald's Vicálvaro",
+    "direccion": "Calle de Herce",
+    "codigo_postal": "28032"
+  },
+  {
+    "enlace": "https://www.ubereats.com/es/store/mcdonalds-opera/eytxdIx_RyS7mZNG-GAyMg",
+    "nombre": "McDonald's Opera",
+    "direccion": "Plaza de Isabel II",
+    "codigo_postal": "28013"
+  },
+  {
+    "enlace": "https://www.ubereats.com/es/store/mcdonalds-palacio-de-hielo/ncdsHkkXSHyVSS8XdgUJ_Q",
+    "nombre": "McDonald's Palacio de Hielo",
+    "direccion": "Calle de Silvano, 77",
+    "codigo_postal": "28043"
+  },
+  {
+    "enlace": "https://www.ubereats.com/es/store/mcdonalds-san-blas/UfWH4cgeTAeWQsqPGsz9KQ",
+    "nombre": "McDonald's San Blas",
+    "direccion": "Av. de Guadalajara, 2",
+    "codigo_postal": "28032"
   }
 ]

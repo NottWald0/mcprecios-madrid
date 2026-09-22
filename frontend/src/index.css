@@ -1,9 +1,26 @@
 :root {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --amarillo: #FFC72C;
+  --rojo: #C8102E;
+  --rojo-hover: #a00e24;
+  --rojo-oscuro: #7a0b1c;
+  --crema: #FFF8E7;
+  --crema-2: #FFF3D1;
+  --blanco: #FFFFFF;
+  --borde: #efe2c2;
+  --borde-fuerte: #e2cf9f;
+  --texto: #2f2413;
+  --texto-suave: #7a6a4c;
+  --verde: #1f7a3d;
+  --verde-fondo: #e7f4ea;
+  --rojo-estado: #b3261e;
+  --rojo-fondo: #fdecea;
+  --gris-fondo: #f3efe6;
+
+  font-family: 'Segoe UI', system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color: #333;
-  background-color: #fff5e1;
+  color: var(--texto);
+  background-color: var(--crema);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -19,9 +36,19 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  background-color: var(--crema);
+}
+
+button, input, select {
+  font-family: inherit;
+  font-size: inherit;
 }
 
 button {
-  font-family: inherit;
   cursor: pointer;
+}
+
+button:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 2px solid var(--rojo);
+  outline-offset: 2px;
 }
