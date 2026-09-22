@@ -1,0 +1,27 @@
+Acivar el entorno virtual
+venv\Scripts\activate
+
+Conectarse al server MySQL
+& "C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe" -u root -p
+
+
+Iniciar server Backend 
+node .\server.js
+
+Iniciar React
+npm run dev
+
+
+
+Script BBDD
+--------------------------------------------------------------------------
+-- Solo hace falta crear la base de datos vacía; las tablas y los datos
+-- los crean directamente los 4 archivos .sql de la carpeta database/
+-- (cada uno incluye su propio DROP TABLE + CREATE TABLE + datos).
+-- No ejecutes CREATE TABLE a mano: si lo haces, los nombres de tabla en
+-- mayúscula ("Productos") y los del dump en minúscula ("productos") se
+-- tratan como tablas DISTINTAS en Linux, y da error de claves duplicadas.
+
+CREATE DATABASE IF NOT EXISTS comparador_de_precios;
+
+---------------------------------------------------------------------------------------------------

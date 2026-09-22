@@ -1,0 +1,43 @@
+name: Scraper diario de precios
+
+# Se ejecuta automáticamente todos los días a las 08:00 UTC (09:00/10:00 hora
+# de Madrid según horario de verano), y también se puede lanzar a mano desde
+# la pestaña "Actions" de GitHub con el botón "Run workflow".
+on:
+  schedule:
+    - cron: "0 8 * * *"
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar el código del repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Instalar dependencias de Python
+        run: pip install -r requirements.txt
+
+      # Los runners de GitHub ya traen Chrome instalado. Selenium (>=4.20)
+      # descarga automáticamente el chromedriver que corresponda a esa
+      # versión de Chrome, así que no hace falta instalarlo aparte.
+
+      - name: Ejecutar el scraper
+        env:
+          HEADLESS: "true"
+        run: python scraper.py
+
+      - name: Cargar los datos en la base de datos
+        env:
+          DB_HOST: ${{ secrets.DB_HOST }}
+          DB_PORT: ${{ secrets.DB_PORT }}
+          DB_USER: ${{ secrets.DB_USER }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+          DB_NAME: ${{ secrets.DB_NAME }}
+        run: python db_loader.py
