@@ -1,11 +1,12 @@
-name: Scraper diario de precios
+name: Scraper de precios
 
-# Se ejecuta automáticamente todos los días a las 08:00 UTC (09:00/10:00 hora
-# de Madrid según horario de verano), y también se puede lanzar a mano desde
-# la pestaña "Actions" de GitHub con el botón "Run workflow".
+# Solo se lanza a mano desde la pestaña "Actions" de GitHub con el botón
+# "Run workflow". La ejecución diaria automática se quitó porque, desde 2026,
+# Uber Eats muestra un CAPTCHA y el scraper no obtiene productos. Para volver
+# a programarlo, añade debajo de "on:":
+#   schedule:
+#     - cron: "0 8 * * *"
 on:
-  schedule:
-    - cron: "0 8 * * *"
   workflow_dispatch:
 
 jobs:

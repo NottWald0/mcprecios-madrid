@@ -44,7 +44,7 @@ La aplicación está pensada para desplegarse en tres partes independientes:
 | Base de datos MySQL | Railway (u otro hosting con MySQL) | Copia las credenciales que te dé el hosting |
 | Backend (Express) | Render o Railway | Variables de entorno: `DB_HOST`, `DB_PORT`, `DB_USER`, `DB_PASSWORD`, `DB_NAME` |
 | Frontend (React/Vite) | Vercel o Netlify | Variable de entorno: `VITE_API_URL` con la URL pública del backend |
-| Scraper | GitHub Actions (programado) | Ver `.github/workflows/scraper.yml` |
+| Scraper | GitHub Actions (manual) | Ver `.github/workflows/scraper.yml` |
 
 ### Pasos
 
@@ -70,12 +70,15 @@ La aplicación está pensada para desplegarse en tres partes independientes:
 5. **Secrets de GitHub Actions**: los de la sección siguiente, con el host y
    puerto **públicos** del paso 1.
 
-### Scraper automático con GitHub Actions
+### Scraper con GitHub Actions
 
-El scraper se ejecuta solo, cada día, en los servidores de GitHub (gratis, sin
-depender de tu ordenador), definido en `.github/workflows/scraper.yml`.
+El scraper se ejecuta en los servidores de GitHub (gratis, sin depender de tu
+ordenador), definido en `.github/workflows/scraper.yml`. Se lanza **a mano**
+desde la pestaña **Actions** del repositorio, con el botón "Run workflow". La
+ejecución diaria automática está desactivada por el CAPTCHA de Uber Eats (ver
+*Limitaciones conocidas*); el propio workflow explica cómo volver a programarla.
 
-Para activarlo, en tu repositorio de GitHub ve a
+Para que pueda escribir en la base de datos, en tu repositorio de GitHub ve a
 **Settings → Secrets and variables → Actions → New repository secret** y añade:
 
 - `DB_HOST`
@@ -84,9 +87,7 @@ Para activarlo, en tu repositorio de GitHub ve a
 - `DB_PASSWORD`
 - `DB_NAME`
 
-con los datos de tu base de datos ya desplegada (no la de local). El workflow
-se puede lanzar también a mano desde la pestaña **Actions** del repositorio,
-con el botón "Run workflow", para probarlo sin esperar al horario programado.
+con los datos de tu base de datos ya desplegada (no la de local).
 
 ## API del backend
 
