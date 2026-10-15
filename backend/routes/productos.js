@@ -87,6 +87,7 @@ router.get('/historico/:id_producto', (req, res) => {
             t.precio_min_cercano <> t.precio_max_cercano AS lectura_ambigua
         FROM (
             SELECT
+                h.id_historico,
                 h.precio AS precio_historico,
                 h.fecha AS fecha_historico,
                 p.nombre AS nombre_producto,
@@ -99,7 +100,7 @@ router.get('/historico/:id_producto', (req, res) => {
             WHERE h.id_producto = ?
             WINDOW w AS (ORDER BY h.fecha RANGE BETWEEN INTERVAL 60 SECOND PRECEDING AND INTERVAL 60 SECOND FOLLOWING)
         ) t
-        ORDER BY t.fecha_historico DESC
+        ORDER BY t.fecha_historico DESC, t.id_historico DESC
     `;
     // Ejecuto la consulta
     connection.query(query, [id_producto], (err, results) => {

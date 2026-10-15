@@ -105,30 +105,38 @@ python db_loader.py
 
 ## Publicación en internet
 
+Todo funciona con planes gratuitos:
+
 | Parte | Dónde está |
 |---|---|
-| Base de datos (MySQL) | Railway |
-| Backend | Railway → https://backend-production-946a.up.railway.app |
+| Base de datos | TiDB Cloud Starter (compatible con MySQL, Frankfurt) |
+| Backend | Vercel → https://mcprecios-api.vercel.app |
 | Web | Vercel → https://mcprecios-madrid.vercel.app |
 | Scraper | En un PC, o a mano desde GitHub Actions (pestaña *Actions*) |
+
+Para cargar precios en la base de datos de internet, el `.env` de la carpeta
+principal debe tener los datos de TiDB Cloud (`DB_HOST`, `DB_PORT=4000`,
+`DB_USER`, `DB_PASSWORD`, `DB_NAME` y `DB_SSL=true`).
 
 <details>
 <summary>Cómo desplegarlo desde cero</summary>
 
-1. **Railway:** crea un proyecto con una base de datos **MySQL** y activa su
-   acceso público (*Settings → Networking → TCP Proxy*). Importa los 4 `.sql`.
-2. **Backend en Railway:** servicio nuevo con la carpeta `backend` y estas
-   variables: `DB_HOST=${{MySQL.MYSQLHOST}}`, `DB_PORT=${{MySQL.MYSQLPORT}}`,
-   `DB_USER=${{MySQL.MYSQLUSER}}`, `DB_PASSWORD=${{MySQL.MYSQLPASSWORD}}`,
-   `DB_NAME=${{MySQL.MYSQLDATABASE}}`. Genera un dominio público.
-3. **Web en Vercel:** importa el repositorio con la carpeta `frontend` y la
-   variable `VITE_API_URL` con la dirección del backend (sin `/` al final).
+1. **Base de datos:** crea un clúster **Starter** en [TiDB Cloud](https://tidbcloud.com)
+   (u otra base de datos compatible con MySQL), genera la contraseña en
+   *Connect*, crea la base de datos `comparador_de_precios` e importa los 4
+   `.sql` de `database/`.
+2. **Backend en Vercel:** proyecto nuevo con la carpeta `backend` (ya incluye
+   `vercel.json` y `api/index.js`) y las variables `DB_HOST`, `DB_PORT`,
+   `DB_USER`, `DB_PASSWORD`, `DB_NAME` y `DB_SSL=true`.
+3. **Web en Vercel:** proyecto con la carpeta `frontend` y la variable
+   `VITE_API_URL` con la dirección del backend (sin `/` al final).
 4. **GitHub Actions (opcional):** en *Settings → Secrets and variables →
-   Actions* añade `DB_HOST`, `DB_PORT`, `DB_USER`, `DB_PASSWORD` y `DB_NAME`
-   con los datos **públicos** de la base de datos de Railway.
+   Actions* añade `DB_HOST`, `DB_PORT`, `DB_USER`, `DB_PASSWORD` y `DB_NAME`.
 
 Si tu base de datos es anterior a las categorías, ejecuta una vez
 `database/migracion_categoria.sql`.
+
+> Los planes gratuitos de Vercel son para uso personal y no comercial.
 
 </details>
 

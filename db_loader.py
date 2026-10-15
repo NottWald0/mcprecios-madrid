@@ -20,7 +20,10 @@ conexion = pymysql.connect(
     port=int(os.environ.get("DB_PORT") or 3306),
     user=os.environ.get("DB_USER", "root"),
     password=os.environ.get("DB_PASSWORD", "root"),
-    database=os.environ.get("DB_NAME", "comparador_de_precios")
+    database=os.environ.get("DB_NAME", "comparador_de_precios"),
+    # DB_SSL=true para bases de datos en la nube que exigen conexión cifrada (p. ej. TiDB Cloud)
+    ssl_verify_cert=os.environ.get("DB_SSL") == "true" or None,
+    ssl_verify_identity=os.environ.get("DB_SSL") == "true" or None
 )
 cursor = conexion.cursor()  # Creo un cursor para ejecutar consultas SQL
 
